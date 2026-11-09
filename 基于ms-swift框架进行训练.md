@@ -566,10 +566,6 @@ swift.trainers.*：在 HF Trainer 基础上加了混入（如 swift/trainers/mix
 
 https://github.com/QwenLM/Qwen3-VL/blob/main/cookbooks/2d_grounding.ipynb
 
-![image-20251223105905443](C:\Users\c's'x\AppData\Roaming\Typora\typora-user-images\image-20251223105905443.png)
-
-![image-20251225113127164](C:\Users\c's'x\AppData\Roaming\Typora\typora-user-images\image-20251225113127164.png)
-
 #### 坐标转换
 
 Qwen3的坐标系统已经从Qwen2.5-VL使用的绝对坐标更改为从0到1000的相对坐标

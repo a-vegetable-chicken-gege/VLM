@@ -6,7 +6,8 @@
 
 ### 对于图像来讲，为什么不将图像一维展平后进行处理呢？
 
-![03697aad2b73d417f37aba106666ecc0](C:\Users\c's'x\Documents\Tencent Files\1468593852\nt_qq\nt_data\Pic\2025-12\Ori\03697aad2b73d417f37aba106666ecc0.jpg)
+![图1](Pictures/03697aad2b73d417f37aba106666ecc0.jpg)
+
 
 如图所示，将3×3的图片展平后对于二维(x,y)坐标下的一维坐标变成了x+y×3，对于(1,1)坐标来说，它的相邻坐标(1,2)和(2,1)分别与它的一维坐标相差3和1，这显然是不合理的。
 
@@ -14,7 +15,7 @@
 
 第一种情况，以图片为分隔符对文本进行分段，连续的文本都视为一行，图片则占据多行，那么排版后的图片和文本的如下图所示。
 
-![2DRope](C:\Users\c's'x\Desktop\批奏折\多模态大模型学习\图片\2DRope.png)
+![2DRope](Pictures/2DRope.png)
 
 这种方法存在几个缺点
 
@@ -25,11 +26,11 @@
 
 首先，在前面已经提到过，Rx,y是Rx和Ry的分块对角组合，所以Rn,n是两个Rn的分块对角组合，而1DRoPE的R(d×d)n也是多个不同θ的Rn的分块对角组合，由此可见，只要我们从R(d×d)n选取不同的θ给x,y，那么Rn,n就可以看成是1DRoPE（即R(d×d)n）的一部分。这样看来，要想2DRoPE能退化为1DRoPE，那么文本的位置应该采取(n,n)的形式，而不是像上一节那样用其他方式指定一个行号。
 
-![FD56320E5CFBA83977C223221825A84C](C:\Users\c's'x\Desktop\批奏折\多模态大模型学习\图片\FD56320E5CFBA83977C223221825A84C.jpg)
+![FD56320E5CFBA83977C223221825A84C](Pictures/fd56320e5cfba83977c223221825a84c.jpg)
 
 具体例子如图所示：
 
-![2DRoPE-](C:\Users\c's'x\Desktop\批奏折\多模态大模型学习\图片\2DRoPE-.png)
+![2DRoPE-](Pictures/2DRoPE-.png)
 
 ### 源代码
 
